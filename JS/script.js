@@ -1,7 +1,6 @@
 
 var randArray = [];
 
-
 for(let i = 0; i < 10; i++) {
     
     let randInt = Math.floor(Math.random() * 101); //get a random number 0 - 100
@@ -70,7 +69,6 @@ function checkEmail(id){
     }
     else {
         id.style.borderColor = "red";
-        id.style.borderBlockColor = "red";
         alert("E-mail must include an \"@\" sign and must start and end with a letter");
         return false;
     }
