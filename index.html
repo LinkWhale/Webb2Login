@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <p id="RandomArrays"></p>
+    
+    <div class="jslogin">
+        <h3>Login JavaScript</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="text" id="email" placeholder="E-mail">
+        <input type="text" id="password" placeholder="Password">
+        <input type="text" id="password2" placeholder="Repeat Password">
+        <div class="terms_conditions">
+            <input type="checkbox" id="terms">
+            <label for="terms">I have read and accepted Terms and Conditions.</label>
+        </div>
+        <button onclick="Validate()">Submit</button>
+    </div>
+
+    <form class="htmllogin" action="./html/registration.html">
+        <h3>Login HTML</h3>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="text" placeholder="Password" minlength="6" required>
+        <div class="terms_conditions">
+            <input type="checkbox" id="termshtml" required>
+            <label for="termshtml">I have read and accepted Terms and Conditions.</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script src="./JS/script.js"></script>
+</body>
+</html>
