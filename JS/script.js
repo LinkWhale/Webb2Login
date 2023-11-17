@@ -27,7 +27,8 @@ function normalSort(array, maxNumber) {
     return newArray; //returns the new array
 }
 
-
+//Upon pressing the Submit button Validate() will execute to check if every input box has been filled in correctly and redirect user to
+//a site that thanks them for registration.
 function Validate() {
 
     var username = document.getElementById("username");
@@ -48,10 +49,10 @@ function Validate() {
     }
 }
 
-
+//Check if username is filled out.
 function checkUsername(id){
     if(id.value == "") {
-        alert("That username is not available.");
+        alert("Username is required");
         id.style.borderColor = "red";
         return false;
     }
@@ -61,7 +62,7 @@ function checkUsername(id){
     }
 }
 
-
+//Check if email includes "@" sign and that it isnt the first or the last sign in the input.
 function checkEmail(id){
     if(id.value.includes("@") && id.value[0] != "@" && id.value[id.value.length - 1] != "@") {
         id.style.borderColor = "black";
@@ -75,7 +76,8 @@ function checkEmail(id){
     }
 }
 
-
+//Check if password is at least 6 characters long and that repeated password is the same as the first one.
+//if either of these conditions aren't true password will be denied.
 function checkPassword(id1, id2) {
     if(id1.value.length < 6 || id1.value != id2.value) {
         id1.style.borderColor = "red";
@@ -90,5 +92,5 @@ function checkPassword(id1, id2) {
         }
 }
 
-
+//Show the randomly generated array and the sorted array on the page.
 document.getElementById("RandomArrays").innerHTML = `${randArray} <br> ${normalSort(randArray, 100)}`;
