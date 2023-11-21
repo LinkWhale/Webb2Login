@@ -34,17 +34,17 @@ function Validate() {
     var email = document.getElementById("email");
     var password = document.getElementById("password");
     var repeatPassword = document.getElementById("password2");
-    var termsChecked = document.getElementById("terms").checked
+    var termsChecked = document.getElementById("terms").checked;
 
     var userIsCorrect = checkUsername(username);
     var emailIsCorrect = checkEmail(email);
     var passIsCorrect = checkPassword(password, repeatPassword);
 
     if(termsChecked != true) {
-        alert("Accept Terms of Service & Conditions before continuing")
+        alert("Accept Terms of Service & Conditions before continuing");
     }
     else if( userIsCorrect == true && emailIsCorrect == true && passIsCorrect == true && termsChecked == true) {
-        window.location.href = "./html/registration.html"
+        window.location.href = "./html/registration.html";
     }
 }
 
@@ -91,4 +91,4 @@ function checkPassword(id1, id2) {
 }
 
 //Show the randomly generated array and the sorted array on the page.
-document.getElementById("RandomArrays").innerHTML = `${randArray} <br> ${normalSort(randArray, 100)}`;
+document.getElementById("RandomArrays").innerHTML = `Random array: ${randArray} <br> Sorted random array: ${normalSort(randArray, 100)}`;
